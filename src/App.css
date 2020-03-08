@@ -1,38 +1,69 @@
-.App {
+.square {
+  background: blue;
+  border: 1px solid gray;
+  float: left;
+  margin: 3px;
+  padding: 0;
+  width: 80px;
+  height: 80px;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 80%;
+  box-sizing: border-box;
+  box-shadow: 3px 3px 3px;
   color: white;
+  border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.square:focus {
+  outline: none;
+}
+.square:hover {
+  background-color: red;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.board-row:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.game {
+  width: 60%;
+  max-width: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+}
+
+ul {
+  padding-left: 30px;
+}
+
+.game-info {
+  margin-left: 20px;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.info button {
+  box-sizing: border-box;
+  list-style: none;
+  background: blue;
+  font-weight: bold;
+  font-size: 14;
+  border-radius: 5px;
+  color: white;
+  box-shadow: 3px 3px 3px black;
+}
+
+body {
+  background: #cccc;
 }
